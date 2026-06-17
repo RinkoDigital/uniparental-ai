@@ -1,0 +1,7 @@
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/app"
+  to = "/assistente-ai.html"
+  status = 200

@@ -81,11 +81,38 @@
           <span class="badge">OpenAI API</span>
         </div>
       </div>
-      <div class="demo-box">
-        <div class="kicker">Pergunta</div>
-        <textarea class="demo-input" readonly>Meu filho de 4 anos faz birra quando desligo a TV. O que eu faço?</textarea>
-        <div class="demo-answer"><strong>Resposta da Uni Parental AI:</strong><br>Avise antes da transição, combine um ritual curto e mantenha o limite com calma. Exemplo: “Faltam 5 minutos. Quando acabar, vamos guardar o controle e escolher um livro.” Depois valide a frustração sem devolver a TV.</div>
-        <div class="notice">Importante: a Uni Parental AI oferece orientação educativa e não substitui avaliação médica, psicológica ou acompanhamento profissional.</div>
+      <div class="demo-box ai-live-box">
+        <div class="kicker">Teste a IA</div>
+        <div class="ai-profile-grid">
+          <label>Idade da criança
+            <select id="childAge" class="ai-select">
+              <option value="0-2 anos">0–2 anos</option>
+              <option value="3-5 anos" selected>3–5 anos</option>
+              <option value="6-8 anos">6–8 anos</option>
+              <option value="9-12 anos">9–12 anos</option>
+              <option value="adolescente">Adolescente</option>
+            </select>
+          </label>
+          <label>Foco
+            <select id="parentGoal" class="ai-select">
+              <option value="limites e birras" selected>Limites e birras</option>
+              <option value="sono e rotina">Sono e rotina</option>
+              <option value="comunicação">Comunicação</option>
+              <option value="escola e comportamento">Escola e comportamento</option>
+              <option value="telas e tecnologia">Telas e tecnologia</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="aiMessages" class="ai-messages" aria-live="polite">
+          <div class="ai-message bot"><strong>Uni Parental AI</strong><p>Me conte uma situação real. Eu vou responder com um plano prático, frase pronta para usar e um pequeno desafio para hoje.</p></div>
+        </div>
+
+        <form id="aiForm" class="ai-form">
+          <textarea id="aiQuestion" class="demo-input" placeholder="Ex: Meu filho de 4 anos faz birra quando desligo a TV. O que eu faço?" required></textarea>
+          <button class="main-cta" type="submit">Perguntar à IA</button>
+        </form>
+        <div class="notice">Importante: a Uni Parental AI oferece orientação educativa. Não substitui pediatra, psicólogo, terapeuta, avaliação médica ou atendimento de emergência.</div>
       </div>
     </div>
   </section>
@@ -103,5 +130,6 @@
   </section>
 
   <footer class="footer"><div class="footer-grid"><div><div class="footer-logo">Uni<br><span style="color:#9f63d9">Parental</span></div><p style="margin-top:14px">Crescer é relacional.</p></div><div><h4>Navegação</h4><a href="index.html">Início</a><a href="metodo.html">Método</a><a href="cursos.html">Cursos</a><a href="assistente-ai.html">Assistente AI</a><a href="sobre.html">Sobre</a></div><div><h4>Cursos</h4><a href="curso-primeira-infancia.html">Primeira Infância</a><a href="curso-infancia-plena.html">Infância Plena</a><a href="curso-pre-adolescencia.html">Pré-adolescência</a><a href="curso-adolescencia.html">Adolescência</a></div><div><h4>Contato</h4><a href="mailto:contato@uniparental.com.br">contato@uniparental.com.br</a><a>Instagram</a></div></div></footer>
+  <script src="assets/uni-parental-ai.js"></script>
 </body>
 </html>
