@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Adolescência | Uni Parental</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css">
+
+<style>
+/* === FUNDO ANIMADO CORRIGIDO — mantém layout original === */
+
+.course-hero{
+  position:relative;
+  overflow:hidden;
+  min-height:calc(100vh - 86px);
+  padding-top:90px;
+  padding-bottom:105px;
+  display:flex;
+  align-items:center;
+}
+
+.bg-anim{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+
+/* 
+  Para essa imagem noturna, o importante é preservar as nuvens de baixo.
+  Por isso o foco fica em center bottom.
+*/
+.sky,
+.sky-depth{
+  position:absolute;
+  inset:-4% -8% -1% -8%;
+  background:url('assets/night.png') center bottom / cover no-repeat;
+  will-change:transform;
+}
+
+.sky{
+  animation:moveSky 42s ease-in-out infinite;
+}
+
+.sky-depth{
+  opacity:.24;
+  filter:blur(6px);
+  animation:moveDepth 62s ease-in-out infinite;
+}
+
+.course-hero > *:not(.bg-anim){
+  position:relative;
+  z-index:2;
+}
+
+/* melhora leitura no fundo escuro sem alterar estrutura */
+.course-hero .title{
+  color:rgba(35,25,78,.96);
+  text-shadow:0 12px 34px rgba(255,255,255,.08);
+}
+
+.course-hero .sub,
+.course-hero .text{
+  color:rgba(45,38,82,.74);
+}
+
+.course-hero .price-box,
+.course-hero .course-art{
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.68);
+  border:1px solid rgba(255,255,255,.62);
+}
+
+@keyframes moveSky{
+  0%{transform:scale(1.055) translate(0,0)}
+  50%{transform:scale(1.095) translate(-.65%,-.7%)}
+  100%{transform:scale(1.055) translate(0,0)}
+}
+
+@keyframes moveDepth{
+  0%{transform:scale(1.11) translate(0,0)}
+  100%{transform:scale(1.145) translate(.75%,.75%)}
+}
+</style>
+
+
+</head><body><header class="page-header"><div class="logo-mini">Uni<br>Parental</div><nav class="nav"><a href="index.html">Início</a><a href="metodo.html">Método</a><a href="cursos.html">Cursos</a><a href="assistente-ai.html">AI</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a></nav><a href="contato.html" class="header-cta">Começar agora ✦</a></header>
+<section class="course-hero">
+<div class="bg-anim">
+  <div class="sky"></div>
+  <div class="sky-depth"></div>
+</div>
+  <div class="course-hero-grid">
+    <div>
+      <a href="cursos.html" class="kicker">‹ Voltar para cursos</a>
+      <h1 class="title" style="margin-top:18px">Adolescência<br><span style="font-size:.55em;color:var(--lilac)">(15–25 anos)</span></h1>
+      <p class="sub" style="margin-left:0">Independência, decisões e relações saudáveis.</p>
+      <div class="price-box">
+        <div><div class="kicker">PDF do curso</div><div class="price">$27</div><p class="text">Material digital com guia, rotina e recomendações práticas.</p></div>
+        <a href="#" class="main-cta">Comprar PDF Adolescência</a>
+      </div>
+    </div>
+    <div class="course-art">♧</div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap center"><div class="kicker">O que você vai aprender</div><h2 class="title">Conteúdo claro para aplicar em casa</h2><div class="grid-3"><div class="card"><div class="icon">✦</div><h3>Autonomia e decisões</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Relações saudáveis</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Propósito e responsabilidade</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Conflitos familiares</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Comunicação madura</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div></div></div>
+</section>
+<section class="section pastel">
+  <div class="wrap grid-2">
+    <div><div class="kicker">Para quem é este curso?</div><h2 class="title">Para pais e cuidadores que querem mais segurança</h2><p class="sub" style="margin-left:0">Ideal para quem quer entender comportamentos, melhorar a comunicação e criar uma rotina mais leve.</p></div>
+    <div class="card"><h3>Inclui</h3><p>PDF digital, checklist de rotina, plano de ação e orientações práticas por fase.</p><div style="margin-top:24px"><a href="#" class="main-cta">Comprar PDF agora</a></div></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap"><div class="center"><div class="kicker">Módulos do curso</div><h2 class="title">Estrutura do conteúdo</h2></div><div style="margin-top:34px"><div class="module"><span>Módulo 1 — Autonomia e decisões</span><strong>+</strong></div><div class="module"><span>Módulo 2 — Relações saudáveis</span><strong>+</strong></div><div class="module"><span>Módulo 3 — Propósito e responsabilidade</span><strong>+</strong></div><div class="module"><span>Módulo 4 — Conflitos familiares</span><strong>+</strong></div><div class="module"><span>Módulo 5 — Comunicação madura</span><strong>+</strong></div></div></div>
+</section>
+<section class="section pastel center"><div class="wrap"><h2 class="title">Vamos transformar juntos?</h2><div class="actions" style="margin-top:28px"><a href="#" class="main-cta">Comprar PDF</a><a href="contato.html" class="ghost-cta">Falar com especialista</a></div></div></section>
+<footer class="footer"><div class="footer-grid"><div><div class="footer-logo">Uni<br><span style="color:#9f63d9">Parental</span></div><p style="margin-top:14px">Crescer é relacional.</p></div><div><h4>Navegação</h4><a href="index.html">Início</a><a href="metodo.html">Método</a><a href="cursos.html">Cursos</a><a href="assistente-ai.html">AI</a><a href="sobre.html">Sobre</a></div><div><h4>Cursos</h4><a href="curso-primeira-infancia.html">Primeira Infância</a><a href="curso-infancia-plena.html">Infância Plena</a><a href="curso-pre-adolescencia.html">Pré-adolescência</a><a href="curso-adolescencia.html">Adolescência</a></div><div><h4>Contato</h4><a href="mailto:contato@uniparental.com.br">contato@uniparental.com.br</a><a>Instagram</a></div></div></footer>
+
+<script>
+const hero = document.querySelector('.course-hero');
+const sky = document.querySelector('.sky');
+const depth = document.querySelector('.sky-depth');
+
+let mx = 0, my = 0, cx = 0, cy = 0;
+
+hero.addEventListener('mousemove', e => {
+  const rect = hero.getBoundingClientRect();
+  mx = ((e.clientX - rect.left) / rect.width - .5) * 14;
+  my = ((e.clientY - rect.top) / rect.height - .5) * 10;
+});
+
+hero.addEventListener('mouseleave', () => {
+  mx = 0;
+  my = 0;
+});
+
+function animateParallax(){
+  cx += (mx - cx) * .06;
+  cy += (my - cy) * .06;
+
+  sky.style.translate = `${cx * -1}px ${cy * -1}px`;
+  depth.style.translate = `${cx * -1.5}px ${cy * -1.5}px`;
+
+  requestAnimationFrame(animateParallax);
+}
+
+animateParallax();
+</script>
+
+
+</body></html>

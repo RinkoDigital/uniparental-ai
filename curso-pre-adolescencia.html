@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pré-adolescência | Uni Parental</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+/* === ANIMAÇÃO DE FUNDO (SEM ALTERAR LAYOUT) === */
+
+.course-hero{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+  padding-top:120px;
+  padding-bottom:120px;
+  display:flex;
+  align-items:center;
+}
+
+/* container do fundo */
+.bg-anim{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+
+/* camadas */
+.sky,
+.sky-depth{
+  position:absolute;
+  inset:-10%;
+  background:url('assets/early-night.png') center/cover no-repeat;
+  will-change:transform;
+}
+
+/* movimento principal */
+.sky{
+  animation:skyMove 40s ease-in-out infinite;
+}
+
+/* profundidade */
+.sky-depth{
+  opacity:.25;
+  filter:blur(6px);
+  animation:skyDepth 60s ease-in-out infinite;
+}
+
+/* mantém seu conteúdo na frente */
+.course-hero > *:not(.bg-anim){
+  position:relative;
+  z-index:2;
+}
+
+/* animações */
+@keyframes skyMove{
+  0%{transform:scale(1.08) translate(0,0)}
+  50%{transform:scale(1.12) translate(-1%,-1%)}
+  100%{transform:scale(1.08) translate(0,0)}
+}
+
+@keyframes skyDepth{
+  0%{transform:scale(1.15)}
+  100%{transform:scale(1.18) translate(1%,1%)}
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="page-header">
+<div class="logo-mini">Uni<br>Parental</div>
+
+<nav class="nav">
+<a href="index.html">Início</a>
+<a href="metodo.html">Método</a>
+<a href="cursos.html">Cursos</a>
+<a href="sobre.html">Sobre</a>
+<a href="contato.html">Contato</a>
+</nav>
+
+<a href="contato.html" class="header-cta">Começar agora ✦</a>
+</header>
+
+<section class="course-hero">
+
+<!-- 🔥 FUNDO ANIMADO (única adição) -->
+<div class="bg-anim">
+  <div class="sky"></div>
+  <div class="sky-depth"></div>
+</div>
+
+<!-- SEU CONTEÚDO ORIGINAL -->
+<div class="course-hero-grid">
+  <div>
+    <a href="cursos.html" class="kicker">‹ Voltar para cursos</a>
+
+    <h1 class="title" style="margin-top:18px">
+      Pré-adolescência<br>
+      <span style="font-size:.55em;color:var(--lilac)">
+        (11–14 anos)
+      </span>
+    </h1>
+
+    <p class="sub" style="margin-left:0">
+      Transição emocional, identidade e comunicação.
+    </p>
+
+    <div class="price-box">
+      <div>
+        <div class="kicker">PDF do curso</div>
+        <div class="price">$27</div>
+        <p class="text">
+          Material digital com guia, rotina e recomendações práticas.
+        </p>
+      </div>
+
+      <a href="#" class="main-cta">
+        Comprar PDF Pré-adolescência
+      </a>
+    </div>
+  </div>
+
+  <div class="course-art">♡</div>
+</div>
+
+</section>
+
+<!-- resto do seu site continua igual -->
+<section class="section">
+  <div class="wrap center"><div class="kicker">O que você vai aprender</div><h2 class="title">Conteúdo claro para aplicar em casa</h2><div class="grid-3"><div class="card"><div class="icon">✦</div><h3>Mudanças emocionais</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Comunicação sem conflito</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Identidade e pertencimento</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Limites digitais</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div><div class="card"><div class="icon">✦</div><h3>Vínculo com segurança</h3><p>Conteúdo prático para aplicar no dia a dia com clareza e segurança.</p></div></div></div>
+</section>
+<section class="section pastel">
+  <div class="wrap grid-2">
+    <div><div class="kicker">Para quem é este curso?</div><h2 class="title">Para pais e cuidadores que querem mais segurança</h2><p class="sub" style="margin-left:0">Ideal para quem quer entender comportamentos, melhorar a comunicação e criar uma rotina mais leve.</p></div>
+    <div class="card"><h3>Inclui</h3><p>PDF digital, checklist de rotina, plano de ação e orientações práticas por fase.</p><div style="margin-top:24px"><a href="#" class="main-cta">Comprar PDF agora</a></div></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap"><div class="center"><div class="kicker">Módulos do curso</div><h2 class="title">Estrutura do conteúdo</h2></div><div style="margin-top:34px"><div class="module"><span>Módulo 1 — Mudanças emocionais</span><strong>+</strong></div><div class="module"><span>Módulo 2 — Comunicação sem conflito</span><strong>+</strong></div><div class="module"><span>Módulo 3 — Identidade e pertencimento</span><strong>+</strong></div><div class="module"><span>Módulo 4 — Limites digitais</span><strong>+</strong></div><div class="module"><span>Módulo 5 — Vínculo com segurança</span><strong>+</strong></div></div></div>
+</section>
+<section class="section pastel center"><div class="wrap"><h2 class="title">Vamos transformar juntos?</h2><div class="actions" style="margin-top:28px"><a href="#" class="main-cta">Comprar PDF</a><a href="contato.html" class="ghost-cta">Falar com especialista</a></div></div></section>
+<footer class="footer"><div class="footer-grid"><div><div class="footer-logo">Uni<br><span style="color:#9f63d9">Parental</span></div><p style="margin-top:14px">Crescer é relacional.</p></div><div><h4>Navegação</h4><a href="index.html">Início</a><a href="metodo.html">Método</a><a href="cursos.html">Cursos</a><a href="assistente-ai.html">AI</a><a href="sobre.html">Sobre</a></div><div><h4>Cursos</h4><a href="curso-primeira-infancia.html">Primeira Infância</a><a href="curso-infancia-plena.html">Infância Plena</a><a href="curso-pre-adolescencia.html">Pré-adolescência</a><a href="curso-adolescencia.html">Adolescência</a></div><div><h4>Contato</h4><a href="mailto:contato@uniparental.com.br">contato@uniparental.com.br</a><a>Instagram</a></div></div></footer></body></html>

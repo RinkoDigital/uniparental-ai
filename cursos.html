@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Cursos | Uni Parental</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css">
+<style>
+/* === Cursos — fundo afternoon animado sem alterar layout === */
+
+.cursos-hero-anim{
+  position:relative;
+  overflow:hidden;
+  min-height:calc(100vh - 86px);
+  padding-top:120px;
+  padding-bottom:120px;
+  display:flex;
+  align-items:center;
+}
+
+.bg-anim{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+
+.sky,
+.sky-depth{
+  position:absolute;
+  inset:-5% -8% -2% -8%;
+  background:url('assets/afternoon.png') center bottom / cover no-repeat;
+  will-change:transform;
+}
+
+.sky{
+  animation:moveSky 42s ease-in-out infinite;
+}
+
+.sky-depth{
+  opacity:.22;
+  filter:blur(6px);
+  animation:moveDepth 62s ease-in-out infinite;
+}
+
+.cursos-hero-anim > *:not(.bg-anim){
+  position:relative;
+  z-index:2;
+}
+
+.cursos-hero-anim .card{
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.64);
+}
+
+@keyframes moveSky{
+  0%{transform:scale(1.055) translate(0,0)}
+  50%{transform:scale(1.095) translate(-.65%,-.7%)}
+  100%{transform:scale(1.055) translate(0,0)}
+}
+
+@keyframes moveDepth{
+  0%{transform:scale(1.11) translate(0,0)}
+  100%{transform:scale(1.145) translate(.75%,.75%)}
+}
+</style>
+
+</head><body><header class="page-header"><div class="logo-mini">Uni<br>Parental</div><nav class="nav"><a href="index.html">Início</a><a href="metodo.html">Método</a><a href="cursos.html">Cursos</a><a href="assistente-ai.html">AI</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a></nav><a href="contato.html" class="header-cta">Começar agora ✦</a></header>
+<section class="section cursos-hero-anim">
+<div class="bg-anim" aria-hidden="true">
+  <div class="sky"></div>
+  <div class="sky-depth"></div>
+</div>
+<div class="wrap center"><div class="kicker">Cursos</div><h1 class="title">Desenvolvimento infantil descomplicado</h1><p class="sub">Cada fase pede uma forma de cuidado, linguagem e presença.</p><div class="grid-4">
+<article class="card"><div class="icon">☁</div><h3>Primeira Infância</h3><p>0–5 anos. Base emocional e desenvolvimento inicial.</p><a href="curso-primeira-infancia.html" class="main-cta" style="margin-top:22px">Ver curso</a></article>
+<article class="card"><div class="icon">☆</div><h3>Infância Plena</h3><p>6–10 anos. Autonomia, limites e conexão.</p><a href="curso-infancia-plena.html" class="main-cta" style="margin-top:22px">Ver curso</a></article>
+<article class="card"><div class="icon">♡</div><h3>Pré-adolescência</h3><p>11–14 anos. Transição emocional e identidade.</p><a href="curso-pre-adolescencia.html" class="main-cta" style="margin-top:22px">Ver curso</a></article>
+<article class="card"><div class="icon">♧</div><h3>Adolescência</h3><p>15–25 anos. Independência, decisões e relações saudáveis.</p><a href="curso-adolescencia.html" class="main-cta" style="margin-top:22px">Ver curso</a></article>
+</div></div></section><footer class="footer"><div class="footer-grid"><div><div class="footer-logo">Uni<br><span style="color:#9f63d9">Parental</span></div><p style="margin-top:14px">Crescer é relacional.</p></div><div><h4>Navegação</h4><a href="index.html">Início</a><a href="metodo.html">Método</a><a href="cursos.html">Cursos</a><a href="assistente-ai.html">AI</a><a href="sobre.html">Sobre</a></div><div><h4>Cursos</h4><a href="curso-primeira-infancia.html">Primeira Infância</a><a href="curso-infancia-plena.html">Infância Plena</a><a href="curso-pre-adolescencia.html">Pré-adolescência</a><a href="curso-adolescencia.html">Adolescência</a></div><div><h4>Contato</h4><a href="mailto:contato@uniparental.com.br">contato@uniparental.com.br</a><a>Instagram</a></div></div></footer>
+<script>
+const coursesHero = document.querySelector('.cursos-hero-anim');
+const sky = document.querySelector('.sky');
+const depth = document.querySelector('.sky-depth');
+
+let mx = 0, my = 0, cx = 0, cy = 0;
+
+if(coursesHero && sky && depth){
+  coursesHero.addEventListener('mousemove', e => {
+    const rect = coursesHero.getBoundingClientRect();
+    mx = ((e.clientX - rect.left) / rect.width - .5) * 14;
+    my = ((e.clientY - rect.top) / rect.height - .5) * 10;
+  });
+
+  coursesHero.addEventListener('mouseleave', () => {
+    mx = 0;
+    my = 0;
+  });
+
+  function animateParallax(){
+    cx += (mx - cx) * .06;
+    cy += (my - cy) * .06;
+
+    sky.style.translate = `${cx * -1}px ${cy * -1}px`;
+    depth.style.translate = `${cx * -1.5}px ${cy * -1.5}px`;
+
+    requestAnimationFrame(animateParallax);
+  }
+
+  animateParallax();
+}
+</script>
+
+</body></html>
